@@ -9,7 +9,7 @@
     justify-content: space-around;
     align-items: center;
     font-size: 10px;
-    border-radius: 5%;
+    border-radius: 2%;
     font-weight: bold;
   }
   
@@ -24,7 +24,7 @@
     margin-right: 0.5rem;
   }
   
-  .badge {
+  .item {
     background-color: #7e5c4f;
     padding: 0.25rem 1rem;
     border-radius: 15px;
@@ -32,8 +32,8 @@
     font-weight: bold;
   }
   
-  .button:hover .badge,
-  .button:active .badge {
+  .button:hover .item,
+  .button:active .item {
     background-color: #b98e7d;
   }
   
