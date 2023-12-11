@@ -1,5 +1,6 @@
 import React from 'react'
-import './Items.css'
+import './Item.css'
+import Form from './Form'
 
 const Item = (props) => {
   return (
@@ -10,7 +11,7 @@ const Item = (props) => {
             <div className='price'>Rs:-{props.price}</div>
         </div>
         <div>
-
+          <Form/>
         </div>
     </li>
   )
