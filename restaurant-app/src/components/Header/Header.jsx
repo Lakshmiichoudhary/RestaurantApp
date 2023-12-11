@@ -4,12 +4,12 @@ import CartButton from './CartButton'
 import './Header.css'
 
 
-function Header() {
+function Header(props) {
   return (
     <>
         <div className='header'>
             <h1>FoooodClub</h1>
-            <CartButton/>
+            <CartButton onClick={props.onOpenCart}/>
         </div>
         <div className='image'>
             <img src={image} alt='food'/>

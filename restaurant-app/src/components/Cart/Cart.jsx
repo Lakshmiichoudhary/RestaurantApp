@@ -21,7 +21,7 @@ function Cart(props) {
         <span>100</span>
       </div>
       <div className='option'>
-        <button className='close'>close</button>
+        <button className='close' onClick={props.onClose}>close</button>
         <button className='order'>Order</button>
       </div>
     </Modal>
