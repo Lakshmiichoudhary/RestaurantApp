@@ -1,8 +1,8 @@
-import './App.css'
-import Meals from './Components/Body/Meals'
-import Header from './components/header/Header'
-import Cart from './Components/Cart/Cart'
 import {useState} from 'react'
+import Header from './Components/Header/Header'
+import Meals from './Components/Body/Meals'
+import Cart from './Components/Cart/Cart'
+import CartProvider from './Context/CartProvider'
 
 function App() {
   const [openCart,setOpenCart] = useState(false)
@@ -16,13 +16,13 @@ function App() {
   }
 
   return (
-    <>
+    <CartProvider>
       {openCart && <Cart onClose={CloseHandler}/>}
       <Header onOpenCart={CartHandler}/>
       <main>
         <Meals/>
       </main>
-    </>
+    </CartProvider>
   )
 }
 

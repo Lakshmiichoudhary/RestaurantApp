@@ -27,21 +27,21 @@ const DummyMeals = [
 ]
 
 const MealsList = () => {
-    const item = DummyMeals.map((meal) => (
-    <Item 
-        id={meal.id}
+    const items = DummyMeals.map((meal) => (
+      <Item
         key={meal.id}
         name={meal.name}
-        description={meal.des}
-        price={meal.price} 
-    /> )) 
-
-  return (
-    <div className='meals'>
+        des={meal.description}
+        price={meal.price}
+      />
+    ));
+  
+    return (
+      <div className='meals'>
         <Card>
-            <ul>{item}</ul>
+          <ul>{items}</ul>
         </Card>
-    </div>
+      </div>
   )
 }
 
