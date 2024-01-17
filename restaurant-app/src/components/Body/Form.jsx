@@ -29,7 +29,13 @@ const Form = (props) => {
       <Input 
         ref={amountInputRef}
         label='Amount' 
-        input={{ id: 'amount' + props.id, type: 'number' }} />
+        input={{ 
+          id: 'amount' + props.id,
+          type: 'number',
+          min:'1',
+          max: '5',
+          step: '1',
+          defaultValue: '1' }} />
       <button>Add</button>
       {!amountIsValid && <h3>Enter a valid amount (1-5).</h3>}
     </form>

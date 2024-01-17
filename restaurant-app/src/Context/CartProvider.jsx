@@ -7,19 +7,22 @@ const CartProvider = (props) => {
 
   const addItemToCartHandler = (item) => {
     setItems((prevItems) => {
-      const existingCartItem = prevItems.find((prevItem) => prevItem.id === item.id);
-      if (existingCartItem) {
-        const updatedItems = prevItems.map((prevItem) =>
-          prevItem.id === item.id ? { ...prevItem, amount: prevItem.amount + item.amount } : prevItem
-        );
+      const existingCartItemIndex = prevItems.findIndex((prevItem) => prevItem.id === item.id);
+  
+      if (existingCartItemIndex !== -1) {
+        const updatedItems = [...prevItems];
+        updatedItems[existingCartItemIndex].amount += item.amount;
         return updatedItems;
       } else {
-        return [...prevItems, item];
+        const updatedItem = { ...item };
+        return [...prevItems, updatedItem];
       }
     });
-
+  
     setTotalAmount((prevTotalAmount) => prevTotalAmount + item.price * item.amount);
   };
+  
+
 
   const removeItemFromCartHandler = (id) => {
     setItems((prevItems) => {

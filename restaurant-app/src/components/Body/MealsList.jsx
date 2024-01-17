@@ -7,7 +7,7 @@ const DummyMeals = [
     {
         id: '11',
         name: 'pizza',
-        description: 'itialien',
+        description: 'italian',
         price: '100',
     },
     {
@@ -19,7 +19,7 @@ const DummyMeals = [
     },
     {
         id: '15',
-        name: 'noodels',
+        name: 'Maggie',
         description: 'chinese',
         price: '60',
 
@@ -30,6 +30,7 @@ const MealsList = () => {
     const items = DummyMeals.map((meal) => (
       <Item
         key={meal.id}
+        id={meal.id}
         name={meal.name}
         des={meal.description}
         price={meal.price}

@@ -20,7 +20,7 @@ const Item = (props) => {
       <div>
         <h2>{props.name}</h2>
         <div className='des'>{props.des}</div>
-        <div className='price'>Rs:-{props.price}</div>
+        <div className='price'>Rs:{props.price}</div>
       </div>
       <div>
         <Form id={props.id} onAddToCart={addToCartHandler} />

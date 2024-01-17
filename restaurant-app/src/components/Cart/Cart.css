@@ -1,6 +1,6 @@
 .cart {
     list-style: none;
-    height: 5%;
+    height: 4%;
     margin: 0;
     padding: 0;
     color: white;
@@ -25,7 +25,7 @@
     font: inherit;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #997567;
+    border: 1px solid ;
     padding: 0.5rem 2rem;
     border-radius: 25px;
     margin-left: 1rem;
